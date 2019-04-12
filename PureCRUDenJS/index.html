@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pure CRUD en JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Reserver Pour Animation CSS et JS -->
+     <!-- Animation CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+     <!-- Animation CSS POUR ProgressBar Lors du Rechargement de la Page  -->
+    <link rel="stylesheet" href="/css/pace-theme-minimal.css">
+
+     <!-- SCRIPT POUR ProgressBar Lors du Rechargement de la Page  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/pace.min.js"></script>
+
+
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <!-- En js on peut remplacer 'method="POST"' de HTML en 'event.preventDefault();' -->
+                    <div>
+                        <label for="">Full Name*</label>
+                        <input type="text" name="fullName" id="fullName">
+                        <label for="" class="validation-error hide" id="fullNameValidationError">Ce champs ne peut pas etre vide.</label>
+                    </div>
+                    <div>
+                        <label for="">EMP Code</label>
+                        <input type="text" name="empCode" id="empCode">
+                        <label for="" class="validation-error hide" id="empCodeValidationError">Ce champs ne peut pas etre vide.</label>
+                    </div>
+                    <div>
+                        <label for="">Salary</label>
+                        <input type="number" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label for="">City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div class="form-action-buttonRelease">
+                        <input type="reset" value="Renitialiser">
+                   </div>
+                    <div class="form-action-buttons">
+                         <input type="submit" value="Submit">
+                    </div>
+
+                </form>
+            </td>
+
+                <!-- Table pour liste des Enregistrements -->
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Emp Code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+<!-- <a href=""></a> -->

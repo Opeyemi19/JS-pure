@@ -1,0 +1,87 @@
+body > table{
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table.list{
+    width: 100%;
+}
+
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Pour l entete de cote Enregistrement */
+tr:nth-child(even), table.list thead>tr{
+    background-color: #dddddd;
+}
+/* Pour les Input */
+input[type=text], input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    /* le 'border-box' permet d'ajuster la taille des inputs ds la dimension ou il se trouve ds ntre cas. Car bien de mettre les inputs debordaire */
+    box-sizing: border-box;
+}
+
+/* Buton submit */
+input[type=reset]{
+    /* width: 30%; */
+    background-color: #dddddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Buton submit */
+input[type=submit]{
+    width: 130%;
+    background-color: #dddddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttonRelease{
+    text-align: left;
+    display: inline-block;
+    margin-left: 15%;
+}
+
+/* Mettre le bouton a droit */
+form div.form-action-buttons{
+    margin-left: 15%;
+    text-align: right;
+    display: inline-block;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color: red;
+    margin-left: 5px;
+}
+
+/* Permet ici de cacher ntre message d'Erreur tant q il n y a pas d erreur cela est possible grace au (display: none;) */
+/* Sinon sans le (display: none;) il mesage Erreur va afficher mais le script de la fction validete() va s executer */
+.hide{
+    display: none;
+}
